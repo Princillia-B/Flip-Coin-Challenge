@@ -1,5 +1,6 @@
 body {
-    background-color: #414A65;
+    background-image: url("../resources/background.png");
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,5 +60,34 @@ button {
     border-radius: 10px;
     border: 0px 0px 10px 0px;
     border-color: #0e4f81;
+}
+
+a {
+    color: black;
+}
+
+/* ---- Animation ---- */
+
+/* Etape 1 : créer une animation avec @keyframes */
+@keyframes spin {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+/* Etape 2 : créer une classe pour utiliser l'animation */
+.spin {
+    animation: spin 0.6s ease-in-out;
+
+    /* spin = le nom de keyframes + la durée de l'animation + faire un mouvement fluide*/
+}
+
+/* Etape 3 : permet de garder un effet 3D et de respecter la profondeur */
+#coin {
+    transform-style: preserve-3d;
 }
 
